@@ -1,0 +1,5 @@
+require("core.plugins")
+require("core.config")
+require("core.language")
+require("core.editor")
+require("core.keymap")
