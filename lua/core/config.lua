@@ -22,3 +22,6 @@ require("neoconf").setup({
 		},
 	},
 })
+
+vim.cmd("tnoremap <Esc> <C-\\><C-n>")
+vim.cmd("set clipboard+=unnamedplus")

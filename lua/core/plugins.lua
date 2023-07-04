@@ -15,6 +15,11 @@ require("lazy").setup({
 	-- essential stuffs
 	"nvim-lua/plenary.nvim",
 	"folke/neodev.nvim",
+	"nvim-lua/popup.nvim",
+	"MunifTanjim/nui.nvim",
+
+	-- text editting
+	"easymotion/vim-easymotion",
 
 	-- language support
 	"neovim/nvim-lspconfig",
@@ -23,6 +28,11 @@ require("lazy").setup({
 	"williamboman/mason-lspconfig.nvim",
 	"jay-babu/mason-null-ls.nvim",
 	"nvim-treesitter/nvim-treesitter",
+	{
+		"glepnir/lspsaga.nvim",
+		event = "LspAttach",
+	},
+	"folke/trouble.nvim",
 
 	-- completion
 	"hrsh7th/nvim-cmp",
@@ -35,17 +45,23 @@ require("lazy").setup({
 	"onsails/lspkind.nvim",
 
 	-- ui and editor
-	"nvim-tree/nvim-tree.lua",
+	{ "nvim-neo-tree/neo-tree.nvim", branch = "v2.x" },
 	"nvim-tree/nvim-web-devicons",
 	"nvim-lualine/lualine.nvim",
 	"akinsho/bufferline.nvim",
 	"folke/which-key.nvim",
 	{ "folke/neoconf.nvim", cmd = "Neoconf", config = true },
-	{
-		"goolord/alpha-nvim",
-		event = "VimEnter",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-	},
+	"glepnir/dashboard-nvim",
+	"nvim-telescope/telescope.nvim",
+	"nvim-telescope/telescope-symbols.nvim",
+	"akinsho/toggleterm.nvim",
+	"sudormrfbin/cheatsheet.nvim",
+
+	-- git
+	"tpope/vim-fugitive",
+	"lewis6991/gitsigns.nvim",
+	"sindrets/diffview.nvim",
+	"akinsho/git-conflict.nvim",
 
 	-- themes
 	"olivercederborg/poimandres.nvim",
