@@ -1,6 +1,6 @@
 set termguicolors
 
-colorscheme sonokai
+colorscheme poimandres
 
 set relativenumber
 set hidden
