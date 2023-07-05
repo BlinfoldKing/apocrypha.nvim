@@ -1,36 +1,6 @@
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
-require("toggleterm").setup({
-	start_in_insert = false,
-	open_mapping = "ESC",
-})
-
-require("lualine").setup({
-	extensions = { "neo-tree", "fugitive" },
-})
-
-require("bufferline").setup({
-	options = {
-		diagnostic = "nvim_lsp",
-	},
-})
-
-require("neo-tree").setup({
-	close_if_last_window = false,
-	enable_git_status = true,
-	enable_diagnostics = true,
-	open_files_do_not_replace_types = { "terminal", "trouble", "qf" },
-	filesystem = {
-		filtered_items = {
-			hide_dotfiles = false,
-			hide_gitignored = false,
-			hide_hidden = false,
-		},
-	},
-})
-
 require("dashboard").setup({
+	theme = "hyper",
+	change_to_vcs_root = true,
 	config = {
 		header = {
 			[[                                                                                   ]],
@@ -45,14 +15,39 @@ require("dashboard").setup({
 			[[     /:/  /       \:\__\        \::/  /       ~~~~         \/__/         /:/  /    ]],
 			[[     \/__/         \/__/         \/__/                                   \/__/     ]],
 			[[                                                                                   ]],
+			[[                                                                                   ]],
+			[[Press <Space> to Start]],
+			[[                                                                                   ]],
+			[[                                                                                   ]],
+			[[                                                                                   ]],
 		},
-
 		packages = { enable = true },
+		shortcut = {
+			{ desc = " Update", group = "@property", action = "Lazy update", key = "u" },
+			{
+				desc = "  Label",
+				icon_hl = "@variable",
+				group = "Label",
+				action = "Telescope find_files",
+				key = "f",
+			},
+			{
+				desc = "  @blinfoldking",
+				group = "Number",
+				action = [[lua require("link-visitor").visit("https://github.com/blinfoldking")]],
+				key = "g",
+			},
+		},
+		project = { enable = false },
+		footer = {
+			"",
+			"",
+			"",
+			"I have no fear, for fear is the little death that kills me over and over.",
+			"Without fear, I die but once.",
+			"",
+			"",
+			"",
+		},
 	},
 })
-
-vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
-vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
-vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
-vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
-vim.fn.sign_define("DiagnosticSignHint", { text = "", texthl = "DiagnosticSignHint" })

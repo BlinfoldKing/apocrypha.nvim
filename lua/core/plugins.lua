@@ -20,6 +20,12 @@ require("lazy").setup({
 
 	-- text editting
 	"easymotion/vim-easymotion",
+	"numToStr/Comment.nvim",
+	{
+		"kylechui/nvim-surround",
+		version = "*",
+		event = "VeryLazy",
+	},
 
 	-- language support
 	"neovim/nvim-lspconfig",
@@ -45,7 +51,7 @@ require("lazy").setup({
 	"onsails/lspkind.nvim",
 
 	-- ui and editor
-	{ "nvim-neo-tree/neo-tree.nvim", branch = "v2.x" },
+	"kyazdani42/nvim-tree.lua",
 	"nvim-tree/nvim-web-devicons",
 	"nvim-lualine/lualine.nvim",
 	"akinsho/bufferline.nvim",
@@ -56,6 +62,9 @@ require("lazy").setup({
 	"nvim-telescope/telescope-symbols.nvim",
 	"akinsho/toggleterm.nvim",
 	"sudormrfbin/cheatsheet.nvim",
+	"rcarriga/nvim-notify",
+	"gelguy/wilder.nvim",
+	"sindrets/winshift.nvim",
 
 	-- git
 	"tpope/vim-fugitive",
@@ -65,4 +74,17 @@ require("lazy").setup({
 
 	-- themes
 	"olivercederborg/poimandres.nvim",
+	"AlexvZyl/nordic.nvim",
+	"tanvirtin/monokai.nvim",
+	"sainnhe/sonokai",
+	"rose-pine/neovim",
+	"Mofiqul/dracula.nvim",
+	"nyoom-engineering/oxocarbon.nvim",
+	"jacoborus/tender.vim",
+	"shaunsingh/nord.nvim",
+	"catppuccin/nvim",
+	"folke/tokyonight.nvim",
+
+	-- misc
+	"xiyaowong/link-visitor.nvim",
 }, {})

@@ -1,5 +1,5 @@
 vim.cmd("autocmd BufWritePre * lua vim.lsp.buf.format()")
-vim.api.nvim_set_keymap("n", "tt", "<cmd>NeoTreeShowToggle filesystem<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "tt", "<cmd>NvimTreeToggle<CR>", { noremap = true, silent = true })
 
 require("which-key").setup({
 	triggers = { "<space>" },
@@ -44,7 +44,7 @@ wk.register({
 		name = "language",
 		t = {
 			name = "tag and symbol",
-			o = { "<cmd>LSoutlineToggle<cr>", "outline" },
+			o = { "<cmd>Lspsaga outline<cr>", "outline" },
 			f = { "<cmd>Telescope treesitter<cr>", "find symbol" },
 		},
 		l = {
@@ -67,6 +67,10 @@ wk.register({
 	w = {
 		name = "window",
 		s = { "<cmd>WinShift<cr>", "shift window" },
+	},
+	["n"] = {
+		"<cmd>Telescope notify<cr>",
+		"notifications",
 	},
 	q = { "<cmd>qa!<cr>", "close all and exit" },
 }, { prefix = "<space>" })
